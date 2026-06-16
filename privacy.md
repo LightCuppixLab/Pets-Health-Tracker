@@ -1,189 +1,158 @@
-# Privacy Policy — Pets Health Tracker
+# Pets Health Tracker Privacy Policy
 
 Last updated: June 16, 2026
 
-Pets Health Tracker ("the app") is a pet-health tracker developed by
-**Light Cup Pix Lab**, based in Padova, Italy. The app lets you record and
-review health information about your own pets. This policy explains what data
-we collect, why, and how we handle it, in compliance with the EU General Data
-Protection Regulation (GDPR). It describes the app as it is currently built
-and deployed.
+Pets Health Tracker ("the app") is a pet-health record-keeping tool developed by Light Cup Pix Lab, based in Padova, Italy. The app lets you record and review health information about your own pets. This policy explains what data we collect, why, and how we handle it, in compliance with the EU General Data Protection Regulation (GDPR).
 
-Pets Health Tracker is a record-keeping tool, not a medical one: it shows your
-pet's data and trends, but it does not provide veterinary diagnoses and does
-not replace professional veterinary advice.
+Pets Health Tracker is available as two native apps that share the same data logic: an Android app and an iOS app. This single policy covers both. The only differences between platforms are the sign-in provider and the subscription provider, and these are explained where relevant. Everything else is identical.
+
+Pets Health Tracker is a record-keeping tool, not a medical one: it shows your pet's data and trends, but it does not provide veterinary diagnoses and does not replace professional veterinary advice.
+
+You can also read our Terms of Service at https://pethealthtracker.app/terms.
 
 ## Data Controller
 
-The data controller is **Light Cup Pix Lab, Padova, Italy**.
-For any privacy request, contact us at **lightcuppixlab.dev@gmail.com**.
+Light Cup Pix Lab, Padova, Italy.
+Contact: lightcuppixlab.dev@gmail.com.
 
 ## Data we collect
 
-The app is built around data about *your pets*, with only the minimum personal
-data about you needed to run an account.
+### Identity (from your sign-in provider)
 
-**Information about you (your identity).** You sign in with Google. Through our
-authentication provider (Supabase Auth) we receive from your Google account your
-email address, a unique account identifier, and your profile display name. We use
-these to create and secure your account and to show who is signed in. We do
-**not** collect a password (there is no email/password login) and we do **not**
-use your Google profile photo. In the app's own database tables we store only
-your account identifier (a UUID) to link your records to you; your email and
-name remain in the managed authentication store.
+You sign in with a social login only. There is no password to create, and we never see or store one.
 
-**Information about your pets (stored on our backend).** For each pet you add,
-we store on our Supabase backend:
+- **On Android** you sign in with Google (Google Sign-In).
+- **On iOS** you sign in with Apple (Sign in with Apple).
 
-- Profile: name, species, breed, sex, and birth date (used to calculate age).
-- Weight history (weight over time).
-- Body measurements (height and abdomen circumference over time).
-- Vaccination records (vaccine name, date given, expiry date), which drive
-  expiry reminders.
-- Reminders / to-dos (a title you write, due date, repeat, completion status),
-  optionally linked to a pet.
-- Personal events (type, title, date, repeat, colour), such as birthdays or
-  grooming.
-- Your subscription status (whether Pro is active, and its expiry) — see
-  *Payments*.
+From the sign-in provider we receive:
 
-**Information that stays only on your device.** Some data is intentionally kept
-on your phone and is **never uploaded** to our backend:
+- your **email address**;
+- a **unique account identifier**; and
+- a **display name**.
 
-- Your pets' photos.
-- Your "pet-sitter" care sheet for each pet: diet, to-do and do-not lists,
-  medications, free-text notes, and the vet's and owner's names and phone numbers.
-- Your nickname and app preferences (theme, language, units, notification
-  settings, quiet hours).
+Two specifics apply to Sign in with Apple on iOS:
 
-Because this on-device data lives in the app's storage, it may be included in
-Android's own system backup to your personal Google Drive and in device-to-device
-transfers, under Android's default backup behaviour. This is data on your own
-device under your own Google account; we do not access it.
+- If you choose **"Hide My Email"**, the email we receive is an Apple **private relay address** (in the form `xxx@privaterelay.appleid.com`) rather than your real address. Apple forwards mail from that relay to you. This is fully supported, and we treat the relay address exactly as we would any email.
+- Apple provides your **name only on the first sign-in**. We store it then; if it is missing, your account simply has no display name. Apple also supplies a **stable user identifier** that durably identifies your account to us across sign-ins, even if your private relay email changes; we map it to the internal user identifier (UUID) used in our database.
 
-**What we do NOT collect.** We do not collect your location, your contacts, an
-advertising identifier, or any analytics or tracking data. The app contains no
-advertising SDK, no analytics SDK, and no crash-reporting SDK, and does not track
-you across other apps or websites. We do not collect your payment card details
-(see *Payments*). We do not access your camera or your broader photo gallery —
-pet photos are chosen through the Android system photo picker.
+We do **not** receive or use a profile photo from either provider.
+
+Your email and name are held in our managed authentication store (Supabase Auth). In the application database tables, your records are linked only by a **user identifier (UUID)**, so your email and name do not appear there.
+
+### Pet data (stored on our backend)
+
+When you use the app, the following is stored server-side so it is available to you and survives reinstalling the app:
+
+- **Pet profile**: name, species, breed, sex, birth date.
+- **Weight history**.
+- **Body measurements**: height, abdomen.
+- **Vaccination records**: name, date given, expiry.
+- **Reminders / to-dos**: free-text title, due date, repeat setting, done state.
+- **Personal events**: type, title, date, repeat, colour.
+- **Subscription entitlement flag**: whether your account is "Pro" and its expiry. This contains **no payment data** (see *Payments* below).
+
+### Device-only data (never uploaded to us)
+
+The following stays **on your device** and is never sent to our servers:
+
+- **Pet photos**.
+- The **pet-sitter care sheet**: diet, to-do list, do-not list, medications, free-text notes, and **vet & owner names and phone numbers**.
+- Your pet's **nickname**.
+- **App preferences**: theme, language, units, notification settings, quiet hours.
+
+You may choose to export the pet-sitter care sheet (for example to share it with your sitter or vet). Once you share such a copy yourself, it is outside our control and outside your device-backup settings.
+
+Because this data lives on your device, it may be included in your **device's system backup** if you have that enabled: **Google Drive on Android** or **iCloud on iOS**. That backup is operated by your OS provider under your own account settings; **we do not access it** and it is outside our control. You can manage or disable it in your device settings.
+
+### What we do NOT collect
+
+We have verified that the app does not collect or use any of the following:
+
+- Location data.
+- Contacts.
+- Advertising identifier.
+- Analytics SDKs, advertising SDKs, or crash-reporting SDKs.
+- Payment card data (see *Payments*).
+- Camera access: photos are chosen through the operating system's photo picker, so the app does not access your camera or your full photo library.
 
 ## Legal basis for processing (GDPR Art. 6)
 
-- **Performance of a contract (Art. 6(1)(b)):** We process your account identity
-  and your pet records to provide the service you asked for — storing and
-  displaying your pets' health information.
-- **Legitimate interests (Art. 6(1)(f)):** We process the minimum technical data
-  needed to keep the service secure and functioning (e.g. per-user data
-  isolation and purchase verification).
-- **Consent (Art. 6(1)(a)):** Local reminders are shown only after you grant the
-  notification permission, and can be turned off at any time. A pet-sitter PDF is
-  shared only when you actively choose to share it.
+- **Performance of a contract (Art. 6(1)(b))**: to create and operate your account, store your pet records, and provide the service you asked for, including verifying a subscription purchase. We retain your subscription-entitlement record (the "Pro" flag and its expiry) on this basis for as long as your account exists, so that purchased access is honoured; it is erased when your authentication account is erased. We do not store any payment or invoice data, which are held by the app store.
+- **Legitimate interests (Art. 6(1)(f))**: to keep the service secure, prevent abuse, and maintain its technical integrity. Our interest is balanced against your rights.
+- **Consent (Art. 6(1)(a))**: where the platform requires you to grant a specific permission (for example, to pick a photo through the OS picker). You can withdraw such consent at any time in your device settings.
 
 ## Your rights (GDPR Art. 15–22)
 
-You have the right to **access**, **rectify**, **erase**, **restrict**, and
-**object** to the processing of your personal data, and the right to **data
-portability**. In practice:
+You have the right to:
 
-- **Access / rectification:** Most of your data is visible and editable directly
-  in the app.
-- **Erasure ("right to be forgotten"):** The in-app **Delete all my data** action
-  removes your pets and all their records (weights, measurements, vaccines,
-  events), your reminders, and your on-device photos and pet-sitter sheets. To
-  also erase your underlying sign-in account — the email and display name held by
-  our authentication provider — contact us at **lightcuppixlab.dev@gmail.com** and
-  we will delete it without undue delay.
-- **Portability / export:** To receive a copy of your stored data in a
-  machine-readable format, contact us at **lightcuppixlab.dev@gmail.com**.
-- **Complaint:** You may lodge a complaint with your local data protection
-  authority.
+- **Access** the data we hold about you.
+- **Rectify** inaccurate data. You can edit your pet records directly in the app at any time.
+- **Erase** your data ("right to be forgotten"). See *Data retention and deletion* below.
+- **Restrict** or **object to** processing.
+- **Data portability**: receive your data in a portable form. The app does not currently offer an in-app export, so please request a copy by email and we will provide one.
+- **Lodge a complaint** with a supervisory authority. In Italy this is the *Garante per la protezione dei dati personali*; you may also contact the authority in your country of residence.
 
-You can exercise any of these rights by contacting
-**lightcuppixlab.dev@gmail.com**.
+To exercise any right, email **lightcuppixlab.dev@gmail.com**.
 
 ## Cookies and tracking technologies
 
-Pets Health Tracker is a native mobile app. It does **not** use cookies, web
-beacons, advertising identifiers, analytics SDKs, or any third-party tracking
-technology, and does not track your activity across other apps or websites.
+The app uses **no cookies and no tracking technologies**. There is no analytics, no advertising, and no third-party tracker.
 
 ## Data retention and deletion
 
-We retain your pet records and account data for as long as your account exists.
-When you use **Delete all my data**, the pet and reminder records and local files
-listed above are removed promptly (server records are deleted, and their linked
-child records are removed automatically). Your sign-in account data is removed
-when you request account deletion as described under *Your rights*. On-device data
-is removed when you delete it in the app or uninstall the app (subject to any
-backup you have made through Android).
+We keep your data for as long as your account exists.
+
+- **In-app deletion**: the **"Delete all my data"** function removes your pets and their associated records (profiles, weight history, measurements, vaccinations, reminders, and events) from our backend, and removes the on-device photos and pet-sitter files from your device. This account-data deletion is available in the app on both platforms. (If your device's system backup is enabled, copies of the on-device data may still exist in your own Google Drive or iCloud backup, which is under your control and which we cannot access or delete.)
+- **What in-app deletion does *not* do**: it does **not** by itself delete your sign-in (authentication) account. Your **email and display name remain in our authentication store**, and your **subscription-entitlement record** (the "Pro" flag and its expiry, linked to your user identifier) is retained, until the account itself is erased.
+- **Full account erasure**: to delete your authentication account as well, so that no email, name, or entitlement record remains, email **lightcuppixlab.dev@gmail.com** and we will erase it. This is also how the right to erasure (Art. 17) is fulfilled in full.
 
 ## Sub-processors
 
-We rely on the following providers that process data on our behalf:
+We rely on the following providers to deliver the service:
 
-- **Supabase** — backend hosting: authentication, PostgreSQL database, and file
-  storage. Stores your account identity (email, display name, account id) and
-  your server-side pet records.
-  Privacy policy: https://supabase.com/privacy
-- **Google** (Google Sign-In / Identity, Google Play Billing, and the Google Play
-  Developer API) — authentication and subscription management / purchase
-  verification.
-  Privacy policy: https://policies.google.com/privacy
+- **Supabase**: backend hosting for authentication, the PostgreSQL database, and storage. Privacy policy: https://supabase.com/privacy
+- **Google**: Google Sign-In (Android login), Google Play (Android subscriptions), and the Google Play Developer API (server-side purchase verification on Android). Privacy policy: https://policies.google.com/privacy
+- **Apple**: Sign in with Apple (iOS login), the App Store (iOS subscriptions), and the App Store Server API (server-side purchase verification on iOS). Privacy policy: https://www.apple.com/legal/privacy/en-ww/
 
-Access to your stored records is isolated per user: our database enforces
-row-level security so you can read and write only your own data, over encrypted
-(HTTPS) connections.
+Which of Google or Apple is involved depends on the platform you use.
 
 ## International data transfers
 
-Our providers (Supabase and Google) may process data on servers located inside
-or, depending on the configured region, outside the European Economic Area. Where
-data is transferred outside the EEA, it is protected by appropriate safeguards
-such as the European Commission's Standard Contractual Clauses (SCCs).
+Where a sub-processor processes data outside the European Economic Area, that transfer is protected by appropriate safeguards, in particular the **European Commission's Standard Contractual Clauses (SCCs)**, together with any supplementary measures required.
 
 ## Reminders / notifications
 
-All reminders — vaccine expiries and personal events — are generated **locally on
-your device**. The app runs a daily on-device check that reads your pet data and
-shows local notifications according to your settings (lead time, quiet hours, and
-on/off toggles). There is **no** push-notification service and no server that
-decides when to notify you. Notifications require the Android notification
-permission, which you can revoke at any time.
+Reminders are **100% local on your device**. The app schedules local reminders on your device and runs an on-device check that reads your pet data and posts those reminders, honouring your notification settings and quiet hours (subject to your operating system's background-activity settings). There is **no push notification service**: no Firebase Cloud Messaging (FCM) and no Apple Push Notification service (APNs) server push. No notification content is sent to or through our servers.
 
 ## Payments
 
-The optional **Pro** subscription is sold and processed entirely by **Google Play
-Billing**, which acts as the merchant of record. All payment collection and card
-handling happen inside Google Play. The app and our backend **never** receive or
-store your card number, billing address, or any payment instrument. After a
-purchase, the app sends only an opaque Google Play purchase token (transiently) to
-our backend, which verifies it with Google's Play Developer API and then stores
-only an entitlement flag (whether Pro is active, and its expiry) linked to your
-account identifier. You can manage or cancel your subscription at any time from
-your Google Play account settings.
+Subscriptions are sold by **your platform's app store**, which acts as the **merchant of record**:
+
+- **On Android**, Google Play (Google Play Billing).
+- **On iOS**, the Apple App Store (StoreKit).
+
+The app store handles **all payment and card data**. **No card number and no billing address ever reaches the app or our backend.** The app receives only an **opaque purchase token or receipt**, which is transient. We verify that token server-side with the store's developer/server API (the Google Play Developer API or the App Store Server API) and store only the resulting **entitlement flag** (the "Pro" flag and its expiry).
+
+You manage, renew, or cancel your subscription from your **store account** (your Google or Apple account), not inside the app.
 
 ## Security
 
-Data is transmitted over encrypted HTTPS connections and protected at the database
-level by row-level security policies, so each account can access only its own
-data. Pet photos and pet-sitter information (including vet and owner contact
-details) are kept on your device and are not uploaded to our servers.
+- All communication between the app and our backend uses **HTTPS**.
+- Data is isolated per user with **row-level security (RLS)** in the database, so one user cannot read another user's records.
+- The most sensitive content, **pet photos and the pet-sitter care sheet (including vet and owner phone numbers)**, is held **device-only** and is never transmitted to us.
+- No password is ever created or stored, because sign-in is delegated to your trusted provider (Google or Apple).
+
+No method of transmission or storage is perfectly secure, but we take reasonable measures appropriate to the data involved.
 
 ## Minors
 
-Pets Health Tracker is intended for adult pet owners and is not directed to
-children. We do not knowingly collect personal data from users under the age of
-**16**. If you believe a minor has provided personal data, contact us at
-**lightcuppixlab.dev@gmail.com** and we will delete it.
+The app is intended for users aged **16 and over**. It is not directed at children under 16, and we do not knowingly collect data from them. We do not ask for your age and have no means to verify it; the limit is a usage condition. If you believe a minor has provided us data, contact us and we will delete it.
 
 ## Changes
 
-We may update this policy from time to time. The "Last updated" date above
-reflects the latest version. Material changes will be communicated through the
-app where appropriate.
+We may update this policy as the app evolves. When we do, we will revise the "Last updated" date above and publish the new version at https://pethealthtracker.app/privacy. Material changes will be brought to your attention where appropriate.
 
 ## Contact
 
-- Privacy questions and data-subject requests: **lightcuppixlab.dev@gmail.com**
-- Data Controller: **Light Cup Pix Lab, Padova, Italy**
+For any privacy question or to exercise your rights, email **lightcuppixlab.dev@gmail.com**.
+
