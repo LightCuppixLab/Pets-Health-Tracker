@@ -1,4 +1,4 @@
-# Pet Health Logbook — Terms of Service
+# Pet Health Logbook Terms of Service
 
 _Last updated: June 16, 2026_
 
