@@ -1,12 +1,12 @@
-# Pets Health Logbook Privacy Policy
+# Pet Health Logbook — Privacy Policy
 
-Last updated: June 16, 2026
+_Last updated: June 16, 2026_
 
-Pets Health Tracker ("the app") is a pet-health record-keeping tool developed by Light Cup Pix Lab, based in Padova, Italy. The app lets you record and review health information about your own pets. This policy explains what data we collect, why, and how we handle it, in compliance with the EU General Data Protection Regulation (GDPR).
+Pet Health Logbook ("the app") is a pet-health record-keeping tool developed by Light Cup Pix Lab, based in Padova, Italy. The app lets you record and review health information about your own pets. This policy explains what data we collect, why, and how we handle it, in compliance with the EU General Data Protection Regulation (GDPR).
 
-Pets Health Tracker is available as two native apps that share the same data logic: an Android app and an iOS app. This single policy covers both. The only differences between platforms are the sign-in provider and the subscription provider, and these are explained where relevant. Everything else is identical.
+Pet Health Logbook is available as two native apps that share the same data logic: an Android app and an iOS app. This single policy covers both. The only differences between platforms are the sign-in provider and the subscription provider, and these are explained where relevant. Everything else is identical.
 
-Pets Health Tracker is a record-keeping tool, not a medical one: it shows your pet's data and trends, but it does not provide veterinary diagnoses and does not replace professional veterinary advice.
+Pet Health Logbook is a record-keeping tool, not a medical one: it shows your pet's data and trends, but it does not provide veterinary diagnoses and does not replace professional veterinary advice.
 
 You can also read our Terms of Service at https://pethealthtracker.app/terms.
 
@@ -76,11 +76,11 @@ We have verified that the app does not collect or use any of the following:
 
 ## Legal basis for processing (GDPR Art. 6)
 
-- Performance of a contract (Art. 6(1)(b)): to create and operate your account, store your pet records, and provide the service you asked for, including verifying a subscription purchase. We retain your subscription-entitlement record (the "Pro" flag and its expiry) on this basis for as long as your account exists, so that purchased access is honoured; it is erased when your authentication account is erased. We do not store any payment or invoice data, which are held by the app store.
-- Legitimate interests (Art. 6(1)(f)): to keep the service secure, prevent abuse, and maintain its technical integrity. Our interest is balanced against your rights.
-- Consent (Art. 6(1)(a)): where the platform requires you to grant a specific permission (for example, to pick a photo through the OS picker). You can withdraw such consent at any time in your device settings.
+- **Performance of a contract (Art. 6(1)(b)):** to create and operate your account, store your pet records, and provide the service you asked for, including verifying a subscription purchase. We retain your subscription-entitlement record (the "Pro" flag and its expiry) on this basis for as long as your account exists, so that purchased access is honoured; it is erased when your authentication account is erased. We do not store any payment or invoice data, which are held by the app store.
+- **Legitimate interests (Art. 6(1)(f)):** to keep the service secure, prevent abuse, and maintain its technical integrity. Our interest is balanced against your rights.
+- **Consent (Art. 6(1)(a)):** where the platform requires you to grant a specific permission (for example, to pick a photo through the OS picker). You can withdraw such consent at any time in your device settings.
 
-## Your rights (GDPR Art. 15-22)
+## Your rights (GDPR Art. 15–22)
 
 You have the right to:
 
@@ -101,17 +101,17 @@ The app uses no cookies and no tracking technologies. There is no analytics, no 
 
 We keep your data for as long as your account exists.
 
-- In-app deletion: the "Delete all my data" function removes your pets and their associated records (profiles, weight history, measurements, vaccinations, reminders, and events) from our backend, and removes the on-device photos and pet-sitter files from your device. This account-data deletion is available in the app on both platforms. (If your device's system backup is enabled, copies of the on-device data may still exist in your own Google Drive or iCloud backup, which is under your control and which we cannot access or delete.)
-- What in-app deletion does not do: it does not by itself delete your sign-in (authentication) account. Your email and display name remain in our authentication store, and your subscription-entitlement record (the "Pro" flag and its expiry, linked to your user identifier) is retained, until the account itself is erased.
-- Full account erasure: to delete your authentication account as well, so that no email, name, or entitlement record remains, email lightcuppixlab.dev@gmail.com and we will erase it. This is also how the right to erasure (Art. 17) is fulfilled in full.
+- **In-app deletion:** the "Delete all my data" function removes your pets and their associated records (profiles, weight history, measurements, vaccinations, reminders, and events) from our backend, and removes the on-device photos and pet-sitter files from your device. This account-data deletion is available in the app on both platforms. (If your device's system backup is enabled, copies of the on-device data may still exist in your own Google Drive or iCloud backup, which is under your control and which we cannot access or delete.)
+- **What in-app deletion does not do:** it does not by itself delete your sign-in (authentication) account. Your email and display name remain in our authentication store, and your subscription-entitlement record (the "Pro" flag and its expiry, linked to your user identifier) is retained, until the account itself is erased.
+- **Full account erasure:** to delete your authentication account as well, so that no email, name, or entitlement record remains, email lightcuppixlab.dev@gmail.com and we will erase it. This is also how the right to erasure (Art. 17) is fulfilled in full.
 
 ## Sub-processors
 
 We rely on the following providers to deliver the service:
 
-- Supabase: backend hosting for authentication, the PostgreSQL database, and storage. Privacy policy: https://supabase.com/privacy
-- Google: Google Sign-In (Android login), Google Play (Android subscriptions), and the Google Play Developer API (server-side purchase verification on Android). Privacy policy: https://policies.google.com/privacy
-- Apple: Sign in with Apple (iOS login), the App Store (iOS subscriptions), and the App Store Server API (server-side purchase verification on iOS). Privacy policy: https://www.apple.com/legal/privacy/en-ww/
+- **Supabase:** backend hosting for authentication, the PostgreSQL database, and storage. Privacy policy: https://supabase.com/privacy
+- **Google:** Google Sign-In (Android login), Google Play (Android subscriptions), and the Google Play Developer API (server-side purchase verification on Android). Privacy policy: https://policies.google.com/privacy
+- **Apple:** Sign in with Apple (iOS login), the App Store (iOS subscriptions), and the App Store Server API (server-side purchase verification on iOS). Privacy policy: https://www.apple.com/legal/privacy/en-ww/
 
 Which of Google or Apple is involved depends on the platform you use.
 
