@@ -1,4 +1,4 @@
-# Pet Health Logbook — Privacy Policy
+# Pet Health Logbook Privacy Policy
 
 _Last updated: June 16, 2026_
 
