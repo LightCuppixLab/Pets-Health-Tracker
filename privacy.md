@@ -1,4 +1,4 @@
-# Pets Health Tracker Privacy Policy
+# Pets Health Logbook Privacy Policy
 
 Last updated: June 16, 2026
 
