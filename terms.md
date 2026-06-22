@@ -1,16 +1,16 @@
-# Pets Health Tracker — Terms of Service
+# Pet Health Logbook — Terms of Service
 
 _Last updated: June 16, 2026_
 
-These Terms of Service ("Terms") govern your use of Pets Health Tracker ("the app"), a pet-health record-keeping app developed by Light Cup Pix Lab, based in Padova, Italy ("we", "us", "our"). By downloading, accessing, or using the app you agree to these Terms. If you do not agree, do not use the app.
+These Terms of Service ("Terms") govern your use of Pet Health Logbook ("the app"), a pet-health record-keeping app developed by Light Cup Pix Lab, based in Padova, Italy ("we", "us", "our"). By downloading, accessing, or using the app you agree to these Terms. If you do not agree, do not use the app.
 
-Pets Health Tracker is available as two native apps that share the same data logic: an Android app and an iOS app. These Terms cover both. The only differences between platforms are the sign-in provider and the subscription provider, and they are noted where relevant.
+Pet Health Logbook is available as two native apps that share the same data logic: an Android app and an iOS app. These Terms cover both. The only differences between platforms are the sign-in provider and the subscription provider, and they are noted where relevant.
 
 Your use of the app is also governed by our Privacy Policy (https://pethealthtracker.app/privacy), which is incorporated into these Terms by reference.
 
 ## 1. The service — and an important disclaimer
 
-Pets Health Tracker is a **record-keeping tool** that lets you record and review health information about your own pets, including weight, measurements, vaccinations, reminders, and events.
+Pet Health Logbook is a **record-keeping tool** that lets you record and review health information about your own pets, including weight, measurements, vaccinations, reminders, and events.
 
 **It is not a medical or veterinary tool.** The app shows your pet's data and trends but does not provide veterinary diagnoses, treatment, or advice, and it does not replace professional veterinary care. Always consult a qualified veterinarian for any decision about your pet's health. You are solely responsible for how you use the information in the app. We are not liable for any decision taken, or not taken, on the basis of the app.
 
